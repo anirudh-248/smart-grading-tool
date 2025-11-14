@@ -1,0 +1,20 @@
+weights:
+  similarity: 0.6
+  quality: 0.3
+  rubric: 0.1
+
+similarity:
+  model_name: "all-MiniLM-L6-v2"
+
+ocr:
+  lang: "eng"
+
+keyword:
+  num_keywords: 15
+
+quality:
+  coherence_max_errors_for_perfect: 0
+  grammar_penalty_per_error: 0.5
+
+logging:
+  level: "INFO"
