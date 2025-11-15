@@ -1,12 +1,12 @@
 import os
 from typing import Any, Dict
 from .logger import get_logger
+
 logger = get_logger(__name__)
 
 def safe_load_text(text: str) -> str:
     if text is None:
         return ""
-    # Normalize whitespace
     return " ".join(text.split())
 
 def save_json(path: str, data: Dict[str, Any]):

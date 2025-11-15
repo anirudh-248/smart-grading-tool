@@ -1,18 +1,17 @@
 import io
 import cv2
-import numpy as np
 from PIL import Image
 from google.cloud import vision
 from google.oauth2 import service_account
-
 from .logger import get_logger
 from .config import Config
+
 
 logger = get_logger(__name__)
 cfg = Config()
 
-# Load Google Vision credentials only once
 _VISION_CLIENT = None
+
 
 def get_vision_client():
     global _VISION_CLIENT
@@ -53,9 +52,6 @@ def preprocess_image_for_ocr(image_path: str) -> bytes:
 
 
 def image_to_text(image_path: str, lang: str = None) -> str:
-    """
-    Extract text from image using Google Cloud Vision OCR
-    """
     try:
         logger.info(f"Running Google Vision OCR on {image_path}")
 
