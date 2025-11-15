@@ -1,3 +1,6 @@
 venv
 samples
 **__pycache__/
+*.pdf
+result.json
+/credentials

@@ -7,12 +7,15 @@ similarity:
   model_name: "all-MiniLM-L6-v2"
 
 ocr:
-  lang: "eng"
+  google_credentials: "credentials/gcloud-service-account.json"
+  use: "google_vision"
+  lang: "en"
 
 keyword:
   num_keywords: 15
 
 quality:
+  languagetool_timeout_seconds: 6
   coherence_max_errors_for_perfect: 0
   grammar_penalty_per_error: 0.5
 
